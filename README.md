@@ -1,3 +1,7 @@
+# electron-fhl
+
+This is a forked version of the [Electron Quick Start](https://github.com/electron/electron-quick-start) project that I created for the Fix Hack Learn week. It uses [N-Api](https://nodejs.org/api/n-api.html) to provide communication between JavaScript and C++.
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
