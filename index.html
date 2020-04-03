@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>ReactJS and C++ communication</title>
+    <link rel='stylesheet' href='./renderer.css'>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div id="react_contents">
+      <!-- React JS components will go here -->
+    </div>
+
+    <!-- Load the react files and the babel file for using JSX syntax. -->
+    <script src="./downloaded/react.development.js"></script><!-- downloaded from https://unpkg.com/react@16/umd/react.development.js -->
+    <script src="./downloaded/react-dom.development.js"></script><!-- downloaded from https://unpkg.com/react-dom@16/umd/react-dom.development.js -->
+    <script src="./downloaded/babel.js"></script><!-- downloaded from https://unpkg.com/babel-standalone@6/babel.js -->
 
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="./renderer.js" type='text/babel'></script>
   </body>
 </html>
